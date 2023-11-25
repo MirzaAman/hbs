@@ -1,0 +1,134 @@
+import './assets/css/styles.css'
+import img from './assets/img/logo.png'
+function App() {
+  return (   
+    <>
+     {/* <!--==================== HEADER ====================--> */}
+        <header className="header">
+            <nav className="nav container">
+                <a href="#" className="nav__logo">
+                    Beevi's Paintings
+                </a>
+            </nav>
+        </header>
+
+        {/* <!--==================== MAIN ====================--> */}
+        <main className="main">
+            {/* <!--==================== HOME ====================--> */}
+            <section className="home">
+                <div className="home__container container">
+                    <div className="home__data">
+                        <span className="home__subtitle">Products Unavailable!</span>
+                        <h1 className="home__title">Coming soon..</h1>
+                        <p className="home__description">
+                            We can't seem to find the Products <br/> you are looking for.
+                        </p>
+                        <a href="https://www.google.com" className="home__button">
+                            Go back
+                        </a>
+                    </div>
+
+                    <div className="home__img">
+                        {/* <img src="assets/img/ghost-img.png" alt=""> */}
+                        <img className='bv' src={img} />
+                        <div className="home__shadow"></div>
+                    </div>
+                </div>
+
+                <footer className="home__footer">
+                    <span>(+91) 9847021166</span>
+                    <span>|</span>
+                    <span>fbeevi015@gmail.com</span>
+                </footer>
+            </section>
+        </main>
+    </>
+  );
+}
+
+export default App;
+
+
+
+
+
+// var options = {
+      //   key: "rzp_test_HBLUGDMBUap2sf",
+      //   key_secret: "NZgDBte6a9k8ikY9JRmgVQIl",
+      //   amount: Product.amount + 0 + 0,
+      //   currency: "INR",
+      //   name: "STARTUP_PROJECTS",
+      //   description: "for testing purpose",
+      //   handler: async function (response) {
+          
+      //     setPayButton('Proceeding..')
+      //     e.preventDefault();
+          
+      //     // emailjs.send(service_id,'template_9hbkms7',public_id,{
+      //     //   flame: fullName,
+      //     //   message: `Order for ${Product.title} at ${Product.amount}. Payment is done through razorpay`,
+      //     //   phnmber: phoneNumber,
+      //     //   email: email,
+      //     //   addLine1: addressLine1,
+      //     //   addLine2: addressLine2,
+      //     //   pincode: pincode,
+
+      //     // })
+      //   },
+      //   prefill: {
+      //     name: { fullName },
+      //     email: { emaill },
+      //     contact: { phoneNumber },
+      //   },
+      //   notes: {
+      //     name: { fullName },
+      //     email: { emaill },
+      //     contact: { phoneNumber },
+      //     address1: { addLine1 },
+      //     address2: { addLine2 },
+      //     pincode: { pincode },
+      //   },
+      //   theme: {
+      //     color: "#F4B601",
+      //   }
+      // };
+      // var pay = new window.Razorpay(options);
+      // pay.open();
+      // setPayButton('Pay Now')
+
+
+setAirPopup(false);
+          setPaymentProcessing(true);
+          emailjs.sendForm('service_f8jk7n1', 'template_9hbkms7', form.current, 'EmguC0ZpaB8hxm6p5').then(() => {
+            setAddLine1("")
+            setAddLine2("")
+            setEmail("")
+            setFullName("")
+            setPhoneNumber("")
+            setPincode("")
+            toast.success('Order placed sucessfully!', {
+              position: "top-left",
+              hideProgressBar: true,
+              closeOnClick: true,
+              pauseOnHover: false,
+              draggable: true,
+              progress: undefined
+            })
+          }).then(() => {
+            UpdateDisabled();
+            emailjs.sendForm('service_1rqvwna', 'template_sjiv6js', form.current, 'Uj9kzEGEHLdGADoXo')
+              .then(() => {
+                toast.success('Order info is mailed to your mail id', {
+                  position: "top-left",
+                  hideProgressBar: true,
+                  closeOnClick: true,
+                  pauseOnHover: false,
+                  draggable: true,
+                  progress: undefined
+                })
+              })
+          }).then(() => {
+            setTimeout(() => {
+              navigate('/product/orderConfirmed/:payId/:productId')
+            })
+          })

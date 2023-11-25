@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/static/css/main.ed31b3d6.css",
+    "main.js": "/static/js/main.103ee902.js",
+    "static/media/login-bg.png": "/static/media/login-bg.54fbac5ae1013eb8a3e2.png",
+    "static/media/product2.png": "/static/media/product2.d014f3e87f9094a67753.png",
+    "static/media/product3.png": "/static/media/product3.5348f0c94deaad4beac9.png",
+    "static/media/ill1.png": "/static/media/ill1.b9b85ae3a0bd097296f3.png",
+    "static/media/ill2.png": "/static/media/ill2.942bc41d5a33d691d5f6.png",
+    "static/media/product5.png": "/static/media/product5.a269716705414e690635.png",
+    "static/media/Thank You Card.png": "/static/media/Thank You Card.7f6bcddd088e80357449.png",
+    "static/media/product4.png": "/static/media/product4.325855c4db7320145ab2.png",
+    "static/media/1.png": "/static/media/1.16d84f8d4f1838ce81ec.png",
+    "static/media/about.png": "/static/media/about.69efe0367f6dcf3f6ce8.png",
+    "static/media/home.png": "/static/media/home.2061d61fc3a995a64ab8.png",
+    "static/media/product1.png": "/static/media/product1.99c41d2f22ac009d3b95.png",
+    "static/media/product6.png": "/static/media/product6.51822c25dc191e9b1bda.png",
+    "static/media/rzp.png": "/static/media/rzp.36ad86112e9fec97647a.png",
+    "static/media/checked.png": "/static/media/checked.f83ed6f05811c4d3e32a.png",
+    "static/media/upi.webp": "/static/media/upi.82159e45647df3a004d3.webp",
+    "index.html": "/index.html",
+    "main.ed31b3d6.css.map": "/static/css/main.ed31b3d6.css.map",
+    "main.103ee902.js.map": "/static/js/main.103ee902.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ed31b3d6.css",
+    "static/js/main.103ee902.js"
+  ]
+}
